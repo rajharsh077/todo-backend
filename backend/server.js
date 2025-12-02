@@ -25,8 +25,8 @@ app.get("/todos",async (req,res)=>{
 })
 
 app.post('/todos', async (req,res) => {
-    const todo = await todo.create({ text : req.body.text });
-    res.json(todo);
+    const newTodo = await todo.create({ text : req.body.text });
+    res.json(newTodo);
 })
 
 app.delete("/todo/:id", async (req, res) => {
